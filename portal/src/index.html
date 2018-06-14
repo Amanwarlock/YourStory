@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" ng-app="storyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Story</title>
+    <!-- CSS STYLES -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <!-- Scripts -->
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+    <!--  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script> -->
+    <!--   <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script> -->
+
+    <!-- Angular js materialize -->
+    <!-- Angular Material Library -->
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+    <!-- Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src = "../node_modules/socket.io/lib/socket.js"></script>
+    <script src = "../node_modules/socket.io-client/lib/socket.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+
+</head>
+
+<body ng-controller="MainController as main">
+    <!--  <base ng-href="/" target="_blank"> -->
+    <header style="background-color : darkseagreen">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand" style="color : white">
+                        <span class="glyphicon glyphicon-book"></span>Your Story</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#!/users" style="color : white"></a>
+                    </li>
+                </ul>
+                <ul class="nav-navbar-nav navbar-right">
+                    <li ng-if="!main.loggedIn">
+                        <a href="#!/login" style="color : white">Login</a>
+                    </li>
+                    <li ng-if="!main.loggedIn">
+                        <a href="#!/signup" style="color : white">Signup</a>
+                    </li>
+                    <li ng-if="main.loggedIn">
+                        <a href="#" style="color : white">Hello {{main.user.username}}</a>
+                    </li>
+                    <li ng-if="main.loggedIn">
+                        <a href="#" style="color : white" ng-click="main.doLogout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        {{ 2 + 2}}
+        <!-- <div ui-view></div> -->
+
+        <div ng-view></div>
+    </main>
+
+
+    <!-- Services -->
+    <script src="services/authService.js"></script>
+    <script src="services/userService.js"></script>
+    <script src="services/storyService.js"></script>
+    <!-- Factories -->
+
+    <!-- Directives -->
+
+    <!-- Controllers -->
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/userController.js"></script>
+    <script src="controllers/storyController.js"></script>
+
+    <!-- Routes -->
+    <script src="app.routes.js"></script>
+
+    <!-- Main Module file -->
+    <script src="app.js"></script>
+</body>
+
+</html>

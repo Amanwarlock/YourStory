@@ -1,0 +1,17 @@
+{
+  "name": "portal",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Aman Kareem"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

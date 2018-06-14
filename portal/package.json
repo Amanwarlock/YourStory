@@ -1,0 +1,31 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Aman Kareem",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.10",
+    "express": "^4.16.3",
+    "google-fonts": "^1.0.0"
+  },
+  "dependencies": {
+    "@angular/cdk": "^6.2.1",
+    "@angular/material": "^6.2.1",
+    "@uirouter/angularjs": "^1.0.18",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.23.6",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^1.9.1",
+    "nodemon": "^1.14.12",
+    "popper.js": "^1.14.3",
+    "socket.io": "^2.1.1"
+  }
+}

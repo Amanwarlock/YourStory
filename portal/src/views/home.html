@@ -1,0 +1,55 @@
+<div class="jumbotron text-centre" ng-if="!main.loggedIn">
+    <div>
+        <h1>Sign up !</h1>
+    </div>
+
+    <div>
+        <p>Login to write your story</p>
+        <a href="#!/login" class="btn btn-primary">Login</a>
+    </div>
+
+</div>
+<div class="row" ng-if="main.loggedIn">
+
+    <div class="col-md-3">
+
+    </div>
+    <!-- <md-content  class="md-padding" layout-xs="column" layout="row"  ng-controller="storyController as story">
+        <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Your Stories</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <div class="panel-body" ng-repeat="el in story.stories">
+                    <p>{{el.content}}</p>
+                </div>
+            </md-card>
+        </div>
+    </md-content> -->
+
+    <div class="col-md-4" ng-controller="storyController as story">
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Write your story</div>
+                <div class="panel-body">
+                    <form ng-submit="story.createStory()">
+                        <input class="form-control input-lg" type="text" name="story" ng-model="story.storyData.content" placeholder="....." required>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Your stories</div>
+            <div class="panel-body" ng-repeat="el in story.stories">
+                <p>{{el.content}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+    </div>
+
+</div>

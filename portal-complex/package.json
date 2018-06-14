@@ -1,0 +1,24 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Aman Kareem",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.10",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "@angular/cdk": "^6.2.1",
+    "@angular/material": "^6.2.1",
+    "@uirouter/angularjs": "^1.0.18",
+    "bootstrap": "^4.1.1",
+    "nodemon": "^1.17.5"
+  }
+}
