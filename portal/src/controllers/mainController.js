@@ -12,9 +12,13 @@
                         self.user = data;
                     }).catch(e => console.error(e));
                 } else {
-                    console.log("user is not logged in path accessed is : " , $location.path());
+                    console.log("user is not logged in path accessed is : ", $location.path());
                     $location.path("/login");
                 }
+            });
+
+            $rootScope.$watch(Auth.isLoggedIn, function (old, newVal) {
+                console.log(" Old and new ", old, newVal);
             });
 
             self.doLogin = function () {
